@@ -11,5 +11,5 @@ This project is a NestJS-based API for tracking blockchain prices and setting pr
 - Swagger API documentation
 
 # Blockchain Price Tracker
-To run the project you can run the following command
-docker compose up --build
+To run the project you can run 
+- docker compose up --build
