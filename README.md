@@ -1,4 +1,4 @@
-# Blockchain Price Tracker
+# Crypto Price Tracker
 
 This project is a NestJS-based API for tracking blockchain prices and setting price alerts. It supports Ethereum and Polygon chains, fetches prices every 5 minutes, and allows users to set email alerts for specific price targets.
 
@@ -10,6 +10,5 @@ This project is a NestJS-based API for tracking blockchain prices and setting pr
 - Dockerized for easy deployment
 - Swagger API documentation
 
-# Blockchain Price Tracker
-To run the project you can run 
+## To run the project you can run 
 - docker compose up --build
