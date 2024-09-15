@@ -1,0 +1,29 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgres://user:password@db:5432/blockchain_tracker
+      - MORALIS_API_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub25jZSI6IjhiOTgwMDBiLTBhOWMtNDBjMS1iMjVhLWYyMzE2ZWRlMTE5MyIsIm9yZ0lkIjoiNDA4MzUwIiwidXNlcklkIjoiNDE5NjAzIiwidHlwZUlkIjoiYWQ2OGIwZmUtNWNkNy00MWUzLTk4MjEtNDUwZDRkMjA2OGE4IiwidHlwZSI6IlBST0pFQ1QiLCJpYXQiOjE3MjYyOTY3MjQsImV4cCI6NDg4MjA1NjcyNH0.qAW1xxn0iGR9Vck3mgQPE_5Eo0hDJfhoBSpV5KYo08A
+      - SMTP_HOST=smtp.gmail.com
+      - SMTP_PORT=587
+      - SMTP_USER=jatinder1901243@gmail.com
+      - SMTP_PASS=ybri zyhh dfne grhd
+      - EMAIL_FROM=jatinder1901243@gmail.com 
+      - EMAIL_TO=jatinderg683@gmail.com
+      
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: blockchain_tracker
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
